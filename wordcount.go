@@ -7,5 +7,11 @@ import (
 )
 
 func main() {
-	fmt.Println(len(strings.Split((string(os.Args[1])), " ")))
+	line := strings.Split((string(os.Args[1])), " ")
+	fmt.Println(line)
+	if line[0] == " " || line[0] == "" {
+		fmt.Println(0)
+	} else {
+		fmt.Println(len(line))
+	}
 }
